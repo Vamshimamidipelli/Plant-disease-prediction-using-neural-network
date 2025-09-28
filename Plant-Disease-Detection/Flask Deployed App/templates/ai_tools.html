@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block pagetitle %}AI Tools{% endblock pagetitle %}
+
+{% block body %}
+<div class="container my-5">
+    <h1 class="section-heading text-center">AI Tools</h1>
+    <div class="divider"></div>
+    <p class="lead text-center">Explore the latest AI tools designed to enhance productivity, creativity, and efficiency.</p>
+
+    <div class="row mt-4">
+        <!-- Tool 1 -->
+        <div class="col-md-4">
+            <div class="feature-box p-3 shadow rounded" style="border-radius: 20px;">
+                <h3 class="text-success">ChatGPT</h3>
+                <p>An AI-powered conversational assistant capable of answering questions, generating content, and aiding with problem-solving tasks.</p>
+                <a href="https://chat.openai.com/" target="_blank" class="btn btn-success btn-sm">Learn More</a>
+            </div>
+        </div>
+
+        <!-- Tool 2 -->
+        <div class="col-md-4">
+            <div class="feature-box p-3 shadow rounded" style="border-radius: 20px;">
+                <h3 class="text-success">TensorFlow</h3>
+                <p>An open-source platform for machine learning that provides a comprehensive ecosystem for model building and deployment.</p>
+                <a href="https://www.tensorflow.org/" target="_blank" class="btn btn-success btn-sm">Learn More</a>
+            </div>
+        </div>
+
+        <!-- Tool 3 -->
+        <div class="col-md-4">
+            <div class="feature-box p-3 shadow rounded" style="border-radius: 20px;">
+                <h3 class="text-success">DALL·E</h3>
+                <p>An AI model for generating images from textual descriptions, enabling creative visualizations and design automation.</p>
+                <a href="https://openai.com/dall-e" target="_blank" class="btn btn-success btn-sm">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}

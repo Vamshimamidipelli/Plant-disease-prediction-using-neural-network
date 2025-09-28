@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Disease Prediction Overview</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+<link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/bttn.css/0.2.4/bttn.css">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #065d13;
+            color: #333;
+        }
+        .navbar-nav .dropdown:hover .dropdown-menu {
+            display: block;
+            margin-top: 0; /* Fixes Bootstrap margin issue */
+}
+
+
+        header {
+            background-color: #4caf50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        h1, h2 {
+            margin: 0;
+            padding: 0.5rem 0;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        /* Section Styling */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section h2 {
+            color: #4caf50;
+            border-bottom: 2px solid #4caf50;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .section ul {
+            padding-left: 1.5rem;
+        }
+
+        .section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #4caf50;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #4caf50;
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#05380b;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/" style="color: white;">Logo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <!-- Home Nav Item -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="/" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
+                            Home
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+                            <li><a class="dropdown-item" href="/overview">Overview</a></li>
+                            <li><a class="dropdown-item" href="/features">Features</a></li>
+                        </ul>
+                    </li>
+                    <!-- AI Engine Nav Item -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="/index" id="aiEngineDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
+                            AI Engine
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="aiEngineDropdown">
+                            <li><a class="dropdown-item" href="/ai-tools">AI Tools</a></li>
+                            <li><a class="dropdown-item" href="/ai-projects">AI Projects</a></li>
+                        </ul>
+                    </li>
+                    <!-- Supplements Nav Item -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="/market" id="supplementsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
+                            Supplements
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="supplementsDropdown">
+                            <li><a class="dropdown-item" href="/nutrition">Nutrition</a></li>
+                            <li><a class="dropdown-item" href="/guides">Guides</a></li>
+                        </ul>
+                    </li>
+                    <!-- About Nav Item -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="/about" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
+                            About
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <li><a class="dropdown-item" href="/team">Team</a></li>
+                            <li><a class="dropdown-item" href="/contact">Contact</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+    <header>
+        <h1>Plant Disease Prediction Using Neural Networks</h1>
+        <p>Empowering Agriculture with Artificial Intelligence</p>
+    </header>
+
+    <div class="container">
+        <!-- Introduction Section -->
+        <section class="section">
+            <h2>Introduction</h2>
+            <p>
+                Our project leverages the power of neural networks to detect and predict plant diseases
+                in real-time. By integrating advanced machine learning techniques, we aim to provide a 
+                reliable solution for farmers to ensure crop health and maximize yields.
+            </p>
+        </section>
+
+        <!-- Features Section -->
+        <section class="section">
+            <h2>Features</h2>
+            <ul>
+                <li>Real-time plant disease detection using neural networks.</li>
+                <li>High accuracy model trained with extensive datasets.</li>
+                <li>User-friendly interface for farmers and agricultural experts.</li>
+                <li>Efficient analysis with visual disease diagnosis reports.</li>
+            </ul>
+        </section>
+
+        <!-- Technology Section -->
+        <section class="section">
+            <h2>Technology Stack</h2>
+            <ul>
+                <li>Python for backend development.</li>
+                <li>TensorFlow and Keras for building neural network models.</li>
+                <li>HTML, CSS, and JavaScript for the user interface.</li>
+                <li>Database support for storing user data and predictions.</li>
+            </ul>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="section">
+            <h2>Get Started</h2>
+            <p>
+                Ready to explore the potential of AI in agriculture? Click below to learn more about our project.
+            </p>
+            <a href="/get-started" class="btn">Learn More</a>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2024 Plant Disease Prediction Project. All rights reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-Z4zjwe+ipuER99e6LyB2QDjseR+wCba7qrEp4iZjll8UJ2B+VXGdEeX61hzMi41E" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0N9I2vE3k41p6fL1AQUXk7NvRbE+fDlzXFXVIzcd8Ww2lvUyjBYRO3YtaZW5+sm" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-Z4zjwe+ipuER99e6LyB2QDjseR+wCba7qrEp4iZjll8UJ2B+VXGdEeX61hzMi41E" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0N9I2vE3k41p6fL1AQUXk7NvRbE+fDlzXFXVIzcd8Ww2lvUyjBYRO3YtaZW5+sm" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

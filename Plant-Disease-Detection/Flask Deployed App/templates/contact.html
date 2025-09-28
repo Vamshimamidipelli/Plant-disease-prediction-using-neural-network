@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block pagetitle %}Contact Us{% endblock pagetitle %}
+
+{% block body %}
+<div class="container my-5">
+    <h1 class="section-heading text-center">Get in Touch</h1>
+    <div class="divider"></div>
+    <p class="text-center lead">
+        We'd love to hear from you! Whether you have a question, feedback, or need support, feel free to reach out.
+    </p>
+
+    <!-- Contact Form Section -->
+    <div class="row mt-5">
+        <!-- Dynamic User Information Display -->
+        <div class="col-md-6">
+            <div class="contact-details">
+                <h3>Our Contact Information</h3>
+                <p><i class="ionicons ion-ios-location"></i> Address: Meerpet, Saroor nagar, Hyderabad, 500097</p>
+                <p><i class="ionicons ion-ios-call"></i> Phone: +91-6305074395</p>
+                <p><i class="ionicons ion-ios-mail"></i> Email: <a href="mailto:support@planttech.com">support@planttech.com</a></p>
+                <p><i class="ionicons ion-ios-clock"></i> Working Hours: Mon - Fri, 9:00 AM to 6:00 PM</p>
+                <hr>
+                <h3>Submitted Messages</h3>
+                <div id="message-list">
+                    <p class="text-muted">No messages submitted yet.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="col-md-6">
+            <form id="contact-form" class="contact-form">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block btn-hover">Send Message</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Handle form submission
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+        e.preventDefault(); // Prevent form from refreshing the page
+
+        // Get form data
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        // Create new message block
+        const messageBlock = document.createElement('div');
+        messageBlock.classList.add('p-3', 'my-3', 'rounded', 'shadow', 'bg-light');
+        messageBlock.innerHTML = `
+            <p><strong>Name:</strong> ${name}</p>
+            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Message:</strong> ${message}</p>
+        `;
+
+        // Append new message to the list
+        const messageList = document.getElementById('message-list');
+        if (messageList.children[0].classList.contains('text-muted')) {
+            messageList.innerHTML = ''; // Remove placeholder text
+        }
+        messageList.appendChild(messageBlock);
+
+        // Clear form inputs
+        document.getElementById('contact-form').reset();
+    });
+</script>
+{% endblock body %}

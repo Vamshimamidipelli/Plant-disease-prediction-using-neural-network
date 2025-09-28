@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block pagetitle %}AI Projects{% endblock pagetitle %}
+
+{% block body %}
+<div class="container my-5">
+    <h1 class="section-heading text-center">AI Projects</h1>
+    <div class="divider"></div>
+    <p class="lead text-center">Discover innovative AI projects addressing real-world challenges and creating impactful solutions.</p>
+
+    <div class="row mt-4">
+        <!-- Project 1 -->
+        <div class="col-md-4">
+            <div class="feature-box p-3 shadow rounded">
+                <h3 class="text-success">Real-Time Plant Disease Detection</h3>
+                <p>A neural network-powered system that analyzes plant images to identify diseases and recommend treatments in real time.</p>
+                <a href="/plant-disease-prediction" class="btn btn-success btn-sm">View Details</a>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="col-md-4">
+            <div class="feature-box p-3 shadow rounded">
+                <h3 class="text-success">Self-Driving Car Simulation using flutter</h3>
+                <p>A reinforcement learning project that trains a virtual car to navigate autonomously in simulated environments.</p>
+                <a href="/self-driving-simulation" class="btn btn-success btn-sm">View Details</a>
+            </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="col-md-4">
+            <div class="feature-box p-3 shadow rounded">
+                <h3 class="text-success">AI-Powered Recommendation System</h3>
+                <p>Utilizing collaborative filtering to create personalized recommendations for e-commerce platforms.</p>
+                <a href="/recommendation-system" class="btn btn-success btn-sm">View Details</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}
